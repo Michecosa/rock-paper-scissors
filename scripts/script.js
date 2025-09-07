@@ -79,6 +79,18 @@ function playGame(playerMove) {
     }
   }
 
+  
+  if (result === 'You win.') {
+    score.wins += 1;
+  } else if (result === 'You lose.') {
+    score.losses += 1;
+  } else if (result === 'Tie.') {
+    score.ties += 1;
+  }
+
   console.log('Player move: '+playerMove+
     ', Computer move: '+computerMove+'\n'+result);
+  console.log('Wins: '+score.wins+
+    ', Losses: '+score.losses+
+    ', Ties: '+score.ties);
 }
