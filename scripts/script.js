@@ -95,6 +95,8 @@ function playGame(playerMove) {
 
   updateScoreElement();
 
+  document.querySelector('.round-result').innerHTML = result;
+
   document.querySelector('.moves').innerHTML = 
     'You ' +
     '<img src="./img/' + playerMove + '.png" class="move-icon">' +
