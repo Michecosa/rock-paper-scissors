@@ -1,8 +1,10 @@
-let score = {
+let score = JSON.parse(localStorage.getItem('score')) || {
   wins: 0,
   losses: 0,
   ties: 0
 };
+
+updateScoreElement
 
 function updateScoreElement() {
   document.querySelector('.my-score')
@@ -92,6 +94,8 @@ function playGame(playerMove) {
   } else if (result === 'Tie.') {
     score.ties += 1;
   }
+
+  localStorage.setItem('score', JSON.stringify(score));
 
   updateScoreElement();
 
