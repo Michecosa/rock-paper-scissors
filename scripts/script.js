@@ -24,6 +24,7 @@ document.querySelector('.scissors-button')
   playGame('scissors');
 });
 
+// keyboard controls to play the game
 document.body.addEventListener('keydown', (event) => {
   if (event.key === 'r') {
     playGame('rock');
@@ -94,6 +95,9 @@ function playGame(playerMove) {
   }
 
   updateScoreElement();
+
+  document.querySelector('.moves').innerHTML = ('You : '+
+  playerMove+' VS '+computerMove+': Computer<br>'+result);
 
   // console.log('Player move: '+playerMove+
   //   ', Computer move: '+computerMove+'\n'+result);
