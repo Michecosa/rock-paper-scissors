@@ -84,7 +84,6 @@ function playGame(playerMove) {
       result = 'You win.';
     }
   }
-
   
   if (result === 'You win.') {
     score.wins += 1;
@@ -96,12 +95,9 @@ function playGame(playerMove) {
 
   updateScoreElement();
 
-  document.querySelector('.moves').innerHTML = ('You : '+
-  playerMove+' VS '+computerMove+': Computer<br>'+result);
-
-  // console.log('Player move: '+playerMove+
-  //   ', Computer move: '+computerMove+'\n'+result);
-  // console.log('Wins: '+score.wins+
-  //   ', Losses: '+score.losses+
-  //   ', Ties: '+score.ties);
+  document.querySelector('.moves').innerHTML = 
+    'You ' +
+    '<img src="./img/' + playerMove + '.png" class="move-icon">' +
+    '<img src="./img/' + computerMove + '.png" class="move-icon">' +
+    ' Computer';
 }
