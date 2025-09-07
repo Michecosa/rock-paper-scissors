@@ -4,6 +4,11 @@ let score = {
   ties: 0
 };
 
+function updateScoreElement() {
+  document.querySelector('.my-score')
+    .innerHTML = 'Wins: '+score.wins+', Losses: '+score.losses+', Ties: '+score.ties;
+}
+
 document.querySelector('.rock-button')
 .addEventListener('click', () => {
   playGame('rock');
@@ -90,14 +95,9 @@ function playGame(playerMove) {
 
   updateScoreElement();
 
-  console.log('Player move: '+playerMove+
-    ', Computer move: '+computerMove+'\n'+result);
-  console.log('Wins: '+score.wins+
-    ', Losses: '+score.losses+
-    ', Ties: '+score.ties);
-}
-
-function updateScoreElement() {
-  document.querySelector('.my-score')
-    .innerHTML = 'Wins: '+score.wins+', Losses: '+score.losses+', Ties: '+score.ties;
+  // console.log('Player move: '+playerMove+
+  //   ', Computer move: '+computerMove+'\n'+result);
+  // console.log('Wins: '+score.wins+
+  //   ', Losses: '+score.losses+
+  //   ', Ties: '+score.ties);
 }
