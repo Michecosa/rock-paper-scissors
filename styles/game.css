@@ -1,6 +1,25 @@
+body {
+  background-color: rgb(42, 42, 42);
+  color: white;
+  font-family: Arial;
+  margin: auto;
+  margin-top: 50px;
+  width:50%;
+  text-align: center;
+}
+
+.results {
+  margin-top: 60px;
+}
+
+.my-score {
+  margin-top: 60px;
+  font-weight: bold;;
+}
+
 .move-button {
   background-color: transparent;
-  /* border: none; */
+  border: none;
   cursor: pointer;
   width: 120px;
   height: 120px;
