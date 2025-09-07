@@ -20,13 +20,57 @@
         <button class="move-button scissors-button">
           <img src="./img/scissors.png" class="move-icon"></button>
       </div>
-      
+
       <!-- Risultati -->
       <div class="results">
         <p class="round-result"></p>
         <p class="moves"></p>
         <p class="my-score"></p>
       </div>
+
+
+      <!-- Reset della partita -->
+      <div class="reset-score-container">
+        <!-- Per garantire il reset dello stato del gioco -->
+        <button onclick="
+          score.wins = 0;
+          score.losses = 0;
+          score.ties = 0;
+          localStorage.removeItem('score');
+          updateScoreElement();
+          " class="reset-score-button"
+          role="button">
+            <!-- Per la grafica vettoriale, con larghezza e altezza di 20px-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              viewBox="0 0 20 20"
+              height="20"
+              fill="none"
+              class="svg-icon"
+            >
+              <!-- Per raggruppare gli elementi e definisce stile del tratto:
+               colore rosso (#ff342b), spessore (1.5) e linecap arrotondato -->
+              <g stroke-width="1.5" stroke-linecap="round" stroke="#ff342b">
+
+                <!-- Definisce l'arco dell'icona -->
+                <path
+                  d="m3.33337 10.8333c0 3.6819 2.98477 6.6667 6.66663 6.6667 3.682 0 6.6667-2.9848 6.6667-6.6667 0-3.68188-2.9847-6.66664-6.6667-6.66664-1.29938 0-2.51191.37174-3.5371 1.01468"
+                ></path>
+                <!-- Definisce la freccia dell'icona -->
+                <path
+                  d="m7.69867 1.58163-1.44987 3.28435c-.18587.42104.00478.91303.42582 1.0989l3.28438 1.44986"
+                ></path>
+
+                <!-- Nota: con m si indica il movimento, mentre con c si disegna-->
+
+              </g>
+            </svg>
+
+            <span class="label">Restart</span>
+        </button>
+      </div>
+
     </main>
   </div>
 

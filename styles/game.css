@@ -15,7 +15,7 @@ body {
 main {
   border: 2px solid white;
   border-radius: 25px;
-  padding: 20px;
+  padding: 60px;
 }
 
 .results {
@@ -47,4 +47,49 @@ main {
 
 .move-icon {
   height: 80px;
+}
+
+
+.reset-score-container {
+  margin-top: 50px;
+  place-items: center;
+}
+
+.reset-score-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  gap: 8px;
+  height: 34px;
+  width: 112px;
+  border: none;
+  background: #ff362b34;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.label {
+  line-height: 20px;
+  font-size: 17px;
+  color: #ff342b;
+  letter-spacing: 1px;
+}
+
+.reset-score-button:hover {
+  background: #ff362b52;
+}
+
+.reset-score-button:hover .svg-icon {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
 }
