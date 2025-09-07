@@ -1,4 +1,4 @@
-let score = {
+  let score = {
   wins: 0,
   loses: 0,
   ties: 0
@@ -23,5 +23,31 @@ function pickComputerMove() {
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
 
-  
+  if (playerMove === 'scissors') {
+    if (computerMove === 'rock') {
+      result = 'You lose.';
+    } else if (computerMove === 'paper') {
+      result = 'You win.';
+    } else if (computerMove === 'scissors') {
+      result = 'Tie.';
+    }
+
+  } else if (playerMove === 'paper') {
+    if (computerMove === 'rock') {
+      result = 'You win.';
+    } else if (computerMove === 'paper') {
+      result = 'Tie.';
+    } else if (computerMove === 'scissors') {
+      result = 'You lose.';
+    }
+
+  } else if (playerMove === 'rock') {
+    if (computerMove === 'rock') {
+      result = 'Tie.';
+    } else if (computerMove === 'paper') {
+      result = 'You lose.';
+    } else if (computerMove === 'scissors') {
+      result = 'You win.';
+    }
+  }
 }
