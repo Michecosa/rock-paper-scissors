@@ -14,7 +14,7 @@ body {
 
 main {
   border: 2px solid white;
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 20px;
 }
 
@@ -40,8 +40,8 @@ main {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  width: 120px;
-  height: 120px;
+  /* width: 120px;
+  height: 120px; */
   margin-right: 10px;
 }
 
