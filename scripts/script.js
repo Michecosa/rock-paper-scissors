@@ -1,8 +1,34 @@
-  let score = {
+let score = {
   wins: 0,
-  loses: 0,
+  losses: 0,
   ties: 0
 };
+
+document.querySelector('.rock-button')
+.addEventListener('click', () => {
+  playGame('rock');
+});
+
+document.querySelector('.paper-button')
+.addEventListener('click', () => {
+  playGame('paper');
+});
+
+document.querySelector('.scissors-button')
+.addEventListener('click', () => {
+  playGame('scissors');
+});
+
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 'r') {
+    playGame('rock');
+  } else if (event.key === 'p') {
+    playGame('paper');
+  } else if (event.key === 's') {
+    playGame('scissors');
+  }
+});
+
 
 function pickComputerMove() {
   const randomNumber = Math.random();
@@ -22,6 +48,8 @@ function pickComputerMove() {
 
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
+
+  let result = '';
 
   if (playerMove === 'scissors') {
     if (computerMove === 'rock') {
@@ -50,4 +78,8 @@ function playGame(playerMove) {
       result = 'You win.';
     }
   }
+
+  console.log(`Player move: ${playerMove}`);
+  console.log(`Computer move: ${computerMove}`);
+  console.log(result);  
 }
