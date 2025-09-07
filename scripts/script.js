@@ -88,9 +88,16 @@ function playGame(playerMove) {
     score.ties += 1;
   }
 
+  updateScoreElement();
+
   console.log('Player move: '+playerMove+
     ', Computer move: '+computerMove+'\n'+result);
   console.log('Wins: '+score.wins+
     ', Losses: '+score.losses+
     ', Ties: '+score.ties);
+}
+
+function updateScoreElement() {
+  document.querySelector('.my-score')
+    .innerHTML = 'Wins: '+score.wins+', Losses: '+score.losses+', Ties: '+score.ties;
 }
