@@ -7,22 +7,27 @@
   <link rel="stylesheet" href="./styles/game.css">
 </head>
 <body>
-  <header><p>Rock Paper Scissors</p></header>
-
-  <main>
-    <button class="move-button rock-button">
-      <img src="./img/rock.png" class="move-icon"></button>
-    <button class="move-button paper-button">
-      <img src="./img/paper.png" class="move-icon"></button>
-    <button class="move-button scissors-button">
-      <img src="./img/scissors.png" class="move-icon"></button>
-
-    <div class="results">
-      <p class="round-result"></p>
-      <p class="moves"></p>
-      <p class="my-score"></p>
-    </div>
-  </main>
+  <div class="container">
+    <!-- Titolo -->
+    <header><h1>Rock Paper Scissors</h1></header>
+    <main>
+      <!-- Bottoni per le mosse -->
+      <div class="moves-container">
+        <button class="move-button rock-button">
+          <img src="./img/rock.png" class="move-icon"></button>
+        <button class="move-button paper-button">
+          <img src="./img/paper.png" class="move-icon"></button>
+        <button class="move-button scissors-button">
+          <img src="./img/scissors.png" class="move-icon"></button>
+      </div>
+      <!-- Risultati -->
+      <div class="results">
+        <p class="round-result"></p>
+        <p class="moves"></p>
+        <p class="my-score"></p>
+      </div>
+    </main>
+  </div>
 
   <footer></footer>
 </body>
