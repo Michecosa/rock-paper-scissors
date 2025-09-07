@@ -39,7 +39,7 @@ function pickComputerMove() {
     computerMove = 'rock';
   } else if(randomNumber >= 1/3 && randomNumber < 2/3) {
     computerMove = 'paper';
-  } else if(randomNumber >= 2/3 && randomNumber < 1) {
+  } else if(randomNumber >= 2/3 && randomNumber <= 1) {
     computerMove = 'scissors';
   }
 
@@ -79,7 +79,6 @@ function playGame(playerMove) {
     }
   }
 
-  console.log(`Player move: ${playerMove}`);
-  console.log(`Computer move: ${computerMove}`);
-  console.log(result);  
+  console.log('Player move: '+playerMove+
+    ', Computer move: '+computerMove+'\n'+result);
 }
