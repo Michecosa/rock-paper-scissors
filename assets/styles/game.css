@@ -46,7 +46,13 @@ main {
 }
 
 .move-icon {
-  height: 60px;
+  height: 80px;
+}
+
+@media (max-width: 600px) {
+  .move-icon {
+    height: 50px;
+  }
 }
 
 
