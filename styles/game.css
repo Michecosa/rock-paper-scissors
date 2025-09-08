@@ -51,10 +51,9 @@ main {
 
 
 .reset-score-container {
-  /* margin-top: 50px;
-  place-items: center; */
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .reset-score-button {
