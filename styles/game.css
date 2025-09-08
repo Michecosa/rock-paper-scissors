@@ -53,7 +53,8 @@ main {
 .reset-score-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* se serve anche verticalmente */
+  width: 100%;
 }
 
 .reset-score-button {
