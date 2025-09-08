@@ -46,13 +46,15 @@ main {
 }
 
 .move-icon {
-  height: 80px;
+  height: 60px;
 }
 
 
 .reset-score-container {
   display: flex;
   justify-content: center !important;
+  /* !important allowed the correct horizontal alignment of the content
+  for mobile devices (tested on iPhone 15 Pro) */
   align-items: center;
   width: 100%;
 }
