@@ -52,8 +52,8 @@ main {
 
 .reset-score-container {
   display: flex;
-  justify-content: center;
-  align-items: center; /* se serve anche verticalmente */
+  justify-content: center !important;
+  align-items: center;
   width: 100%;
 }
 

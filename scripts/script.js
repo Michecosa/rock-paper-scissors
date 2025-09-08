@@ -103,7 +103,7 @@ function playGame(playerMove) {
 
   document.querySelector('.moves').innerHTML = 
     'You ' +
-    '<img src="./img/' + playerMove + '.png" class="move-icon">' +
-    '<img src="./img/' + computerMove + '.png" class="move-icon">' +
+    '<img src="./assets/img/' + playerMove + '.png" class="move-icon">' +
+    '<img src="./assets/img/' + computerMove + '.png" class="move-icon">' +
     ' Computer';
 }
